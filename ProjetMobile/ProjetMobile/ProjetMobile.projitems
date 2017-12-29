@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{09ba64d9-01cd-4e88-9281-77cb14ea0fc0}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ProjetMobile</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Manga.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserManga.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStoreManga.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStoreUser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStoreUserManga.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStoreManga.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStoreUser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStoreUserManga.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MyDbContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AddUserViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MangaDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MangasViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SignUpViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UsersViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Accueil.xaml.cs">
+      <DependentUpon>Accueil.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Description.xaml.cs">
+      <DependentUpon>Description.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DetailFavorite.xaml.cs">
+      <DependentUpon>DetailFavorite.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml.cs">
+      <DependentUpon>ItemsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ListFavorite.xaml.cs">
+      <DependentUpon>ListFavorite.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml.cs">
+      <DependentUpon>NewItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Recherche.xaml.cs">
+      <DependentUpon>Recherche.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SignupPage.xaml.cs">
+      <DependentUpon>SignupPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserPage.xaml.cs">
+      <DependentUpon>UserPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserPageUPD.xaml.cs">
+      <DependentUpon>UserPageUPD.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SignupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Accueil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Recherche.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserPageUPD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Description.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ListFavorite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)akame_ga_kill.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)black_clover.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)dragon_ball_super.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)elite.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)kabaneri.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)kenichi.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)kiseijuu.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)konosuba.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)kujira_no_kora_wa_sajou_ni_utau.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)majustu.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)mob_psycho_100.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)nanatsu_no_taizai.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)ajin.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)blood_c.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)evil_or_live.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)fairy_tail.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)hunter_x_hunter.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)inuyashiki.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)juuni_taisen.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)kakegurui.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)kuroko_no_basket.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)my_hero_academia.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)naruto.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)naruto_shippuden.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)new_game.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)noragami.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)one_piece.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)one_punch_man.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)prison_school.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)railgun.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)re_creators.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)re_zero.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)rokudenashi.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)sakamoto.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)shingeki_no_kyojin.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)shokugeki_no_soma.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)shoukoku_no_altair.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)ushio_to_tora.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)vivid_strike.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)youjo_senki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\DetailFavorite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

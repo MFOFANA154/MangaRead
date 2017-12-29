@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetMobile.Views.ListFavorite"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="favoritelist" 
+                        ItemsSource="{Binding UserMangas}"
+                        RefreshCommand="{Binding LoadFavoriteCommand}"
+                        IsPullToRefreshEnabled="true"
+                        HasUnevenRows="true"
+                        IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                        CachingStrategy="RecycleElement"
+                      ItemSelected="OnFavoriteSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Titre}" Detail="{Binding Auteur}"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

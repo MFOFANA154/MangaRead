@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="ProjetMobile.Views.SignupPage"
+             Title="Ajout Utilisateur">
+ 
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Ajout Utilisateur" TextColor="White" FontSize="20"></Label>
+
+            <Label Text="Pseudo" TextColor="Black" FontSize="20"></Label>
+            <Entry Text="{Binding User.Pseudo, Mode=TwoWay}" Placeholder="Pseudo" WidthRequest="150"></Entry>
+            <Label Text="Prénom" TextColor="Black" FontSize="20"></Label>
+            <Entry Text="{Binding User.FirstName, Mode=TwoWay}" Placeholder="Prénom" WidthRequest="150"></Entry>
+            <Label Text="Nom" TextColor="Black" FontSize="20" />
+            <Entry Text="{Binding User.LastName, Mode=TwoWay}" Placeholder="Nom" WidthRequest="150"></Entry>
+
+            <Label Text="Email" TextColor="Black" FontSize="20"/>
+            <Entry Text="{Binding User.Email, Mode=TwoWay}" Placeholder="Email" WidthRequest="150"></Entry>
+
+            <Label Text="Mot de passe" TextColor="Black" FontSize="20"/>
+            <Entry Text="{Binding User.Password, Mode=TwoWay}" Placeholder="Mot de passe" WidthRequest="150" IsPassword="true"></Entry>
+
+
+            <!--<Button BackgroundColor="Gray" TextColor="White" Text="Save" Clicked="OnSave"/>-->
+            <Button BackgroundColor="Gray" TextColor="White" Text="Valider" Command="{Binding SaveClickedCommand}" Clicked="OnSave" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetMobile.Views.Description"
+             Title="{Binding Manga.Titre}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+            VerticalOptions="FillAndExpand">
+            <Image Source="{Binding Manga.Image}"/>
+
+                <Label Text="Auteur :" TextColor="Black" FontAttributes ="Bold" FontSize="20"></Label>
+            <Label Text="{Binding Manga.Auteur}" TextColor="Black"  FontSize="20"></Label>
+                <Label Text="Titre :" TextColor="Black" FontSize="20" FontAttributes ="Bold"></Label>
+            <Label Text="{Binding Manga.Titre}" TextColor="Black" FontSize="Small"></Label>
+                <Label Text="Episodes :" TextColor="Black" FontSize="20" FontAttributes ="Bold"></Label>
+            <Label Text="{Binding Manga.Episode}" TextColor="Black" FontSize="20"></Label>
+                <Label Text="Genre :" TextColor="Black" FontSize="20" FontAttributes ="Bold"></Label>
+            <Label Text="{Binding Manga.Genre}" TextColor="Black" FontSize="Small"></Label>
+                <Label Text="Descriptif :" TextColor="Black" FontSize="20" FontAttributes ="Bold"></Label>
+            <Label Text="{Binding Manga.Descriptif}" TextColor="Black" FontSize="Small"></Label>
+                <Label Text="Statut :" TextColor="Black" FontSize="20" FontAttributes ="Bold"></Label>
+            <Label Text="{Binding Manga.Status}" TextColor="Black" FontSize="20"></Label>
+
+
+                <Button Margin="0,10,0,0" Text="Première aperçu" Command="{Binding OpenWebCommand}" BackgroundColor="{StaticResource Primary}" TextColor="Black" />
+
+
+                <Button BackgroundColor="Gray" TextColor="White" Text="Ajouter" Clicked="OnAddFavorite" Command="{Binding FavoriteClickedCommand}"/>
+            
+        </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

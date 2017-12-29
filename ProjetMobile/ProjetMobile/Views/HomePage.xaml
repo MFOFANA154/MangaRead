@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetMobile.Views.HomePage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Entry Text="{Binding User.Email, Mode=TwoWay}" Placeholder="Email" WidthRequest="150"></Entry>
+            <Entry Text="{Binding User.Password, Mode=TwoWay}" Placeholder="Mot de passe" WidthRequest="150" IsPassword="true"></Entry>
+
+            <Button BackgroundColor="Gray" TextColor="White" Text="Connexion" Clicked="OnLogin"/>
+            <Button BackgroundColor="Gray" TextColor="White" Text="Inscription" Clicked="OnSignUp"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

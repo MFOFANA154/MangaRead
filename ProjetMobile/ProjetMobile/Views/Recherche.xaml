@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetMobile.Views.Recherche"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edition du profil" Clicked="OnEditUser" />
+        <ToolbarItem Text="Effacer cet utilisateur" Clicked="OnDeleteUser" Command="{Binding DeleteClickedCommand}" />
+        <ToolbarItem Text="Ma liste de favoris" Clicked="OnFavoriteList" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start" Orientation="Vertical">
+            <Label Text="Liste des Mangas" FontAttributes ="Bold" TextColor ="Black" FontSize ="Small"/>
+            <Label Text="Barre de recherche"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"/>
+            <SearchBar TextChanged="OnChangeText"></SearchBar>
+            <ListView x:Name="mangalist" 
+                        ItemsSource="{Binding Mangas}"
+                        RefreshCommand="{Binding LoadMangasCommand}"
+                        IsPullToRefreshEnabled="true"
+                        HasUnevenRows="true"
+                        IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                        CachingStrategy="RecycleElement"
+                        ItemSelected="OnMangaSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Titre}" Detail="{Binding Auteur}"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ScrollView VerticalOptions="FillAndExpand"></ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+  
+</ContentPage> 
